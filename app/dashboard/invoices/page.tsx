@@ -8,6 +8,13 @@ import { Suspense } from 'react';
 
 import { fetchInvoicesPages } from '@/app/lib/data';
 
+// 嵌套页面中的元数据将覆盖父级中的元数据。
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+    title: 'Invoices',
+};
+
+
 export default async function Page({
     searchParams,
 }: {
